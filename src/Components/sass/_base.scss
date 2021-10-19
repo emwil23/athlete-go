@@ -9,8 +9,8 @@ $font-primary: 'Montserrat', sans-serif;
 
 //BASIC TEMPLATE
 *,
-&::before,
-&::after {
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: inherit;
