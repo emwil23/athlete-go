@@ -4,6 +4,7 @@
   width: 100%;
   height: 85vh;
   display: grid;
+  grid-template-rows: 85vh;
   grid-template-columns: [login-start] 30vw [login-end cover-start] 1fr [cover-end];
   border-radius: 2rem;
   overflow: hidden;

@@ -1,21 +1,35 @@
 import React from 'react';
 
 class LoginPage extends React.Component {
-  state = { count: 1, dotSelect: 'counter--1' };
+  state = { count: 1 };
 
   Login = () => {
     return <div>Login</div>;
   };
-
-  Selected = (select) => {
-    const selected = document.querySelector(`#counter--1`);
-    selected.style.backgroundColor = 'red';
+  Cover = (counter) => {
+    if (counter === 1)
+      return (
+        <div className='item-1'>
+          <div className='item-1--heading'>AthleteGO</div>
+          <div className='item-1--subhead'>
+            Your one stop plan to achieve big
+          </div>
+        </div>
+      );
+    else if (counter === 2) return <div className='item-2'>2</div>;
+    else if (counter === 3) return <div className='item-3'>3</div>;
   };
 
-  Cover = (counter) => {
-    if (counter === 2) return <div className='item-2'>2</div>;
-    else if (counter === 3) return <div>3</div>;
-    else if (counter === 1) return <div className='item-1'>1</div>;
+  ChangeCover = () => {
+    var current = this.state.count;
+    setTimeout(() => {
+      current += 1;
+      if (current === 4) {
+        return () => clearTimeout(current);
+      } else {
+        this.setState({ count: current });
+      }
+    }, 5000);
   };
 
   render() {
@@ -44,10 +58,10 @@ class LoginPage extends React.Component {
                   className='form__input'
                   placeholder='Email'
                   id='email'
-                  autoComplete={false}
+                  autoComplete='false'
                   required={true}
                 />
-                <label for='email' className='form__label'>
+                <label htmlfor='email' className='form__label'>
                   Email
                 </label>
               </div>
@@ -57,10 +71,10 @@ class LoginPage extends React.Component {
                   className='form__input'
                   placeholder='**********'
                   id='email'
-                  autoComplete={false}
+                  autoComplete='false'
                   required={true}
                 />
-                <label for='email' className='form__label'>
+                <label htmlfor='password' className='form__label'>
                   Password
                 </label>
               </div>
@@ -74,32 +88,27 @@ class LoginPage extends React.Component {
         <div className='container__cover'>
           <div className='container__cover__items'>
             {this.Cover(this.state.count)}
-            {/* <ul className='container__cover__items-list'>
-              <li className='item-1'>HEY 1</li>
-              <li className='item-2'>HEY 2</li>
-              <li className='item-3'>HEY 3</li>
-            </ul> */}
+            {/* {this.ChangeCover()} */}
           </div>
           <div className='container__cover-counter'>
             <div
-              className='counter counter--1'
-              id='counter--1'
+              className={`counter counter--1 ${
+                this.state.count === 1 ? '-active' : ''
+              }`}
               onClick={() => this.setState({ count: 1 })}
-              onClickCapture={
-                ((e) => this.setState({ dotSelect: e.target.id }),
-                this.Selected(this.state.dotSelect))
-              }
               style={{ cursor: 'pointer' }}
             ></div>
             <div
-              className='counter counter--2'
-              id='counter--2'
+              className={`counter counter--2 ${
+                this.state.count === 2 ? '-active' : ''
+              }`}
               onClick={() => this.setState({ count: 2 })}
               style={{ cursor: 'pointer' }}
             ></div>
             <div
-              className='counter counter--3'
-              id='counter--3'
+              className={`counter counter--3 ${
+                this.state.count === 3 ? '-active' : ''
+              }`}
               onClick={() => this.setState({ count: 3 })}
               style={{ cursor: 'pointer' }}
             ></div>

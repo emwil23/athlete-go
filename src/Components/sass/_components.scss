@@ -62,7 +62,7 @@
 }
 
 .-active {
-  //background-color: $color-tertiary;
+  background-color: $color-tertiary !important;
 }
 
 //Lgin-form Design
@@ -151,7 +151,7 @@
 
   &__items,
   &__items-list {
-    height: 90%;
+    height: 95%;
     width: 100%;
   }
 
@@ -161,11 +161,29 @@
     justify-content: space-evenly;
 
     position: absolute;
-    bottom: 15rem;
+    bottom: 3rem;
   }
 }
 .item-1 {
   height: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 5rem;
+
+  &--heading {
+    font-family: $font-secondary;
+    font-size: 8rem;
+    font-weight: 600;
+  }
+
+  &--subhead {
+    font-family: $font-secondary;
+    font-size: 1.6rem;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
 }
 
 .item-2 {
@@ -181,4 +199,10 @@
   width: 1rem;
   border-radius: 50%;
   background-color: black;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: $color-face;
+    transform: scale(1.3);
+  }
 }
