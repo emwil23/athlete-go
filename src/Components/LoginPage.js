@@ -1,7 +1,7 @@
 import React from 'react';
 
 class LoginPage extends React.Component {
-  state = { count: 1 };
+  state = { count: 2 };
 
   Login = () => {
     return <div>Login</div>;
@@ -16,15 +16,36 @@ class LoginPage extends React.Component {
           </div>
         </div>
       );
-    else if (counter === 2) return <div className='item-2'>2</div>;
-    else if (counter === 3) return <div className='item-3'>3</div>;
+    else if (counter === 2) return <div className='item-2'>
+      <b>Why Us?</b>
+      <br></br>
+      <br></br>
+       Our Site provides a very effective and effecient Diet plan 
+      <br></br>
+      for Athletes and people who have interest at staying fit.
+    </div>;
+    else if (counter === 3) return <div className='item-3'>
+    <b>How We Work!</b>
+    <br></br>
+    <br></br>
+    We Provide a diet chart to our clients which is made by our expert dietitians.
+    </div>;
+    else if(counter === 4 ) return <div className='item-4'><b>Who we are?</b>
+    <br></br>
+    <br></br>
+    We are team of expert dietitian our ditetians has helped many athelets in achieivng their goals
+    and helped them in maintaining their BMI by giving them best diet plan according to their food preferences and body needs.
+    </div>
+    else  if(counter === 5 ) return <div className='item-5'><b>Testimony</b>
+    </div>
+
   };
 
   ChangeCover = () => {
     var current = this.state.count;
     setTimeout(() => {
       current += 1;
-      if (current === 4) {
+      if (current === 5) {
         return () => clearTimeout(current);
       } else {
         this.setState({ count: current });
@@ -112,7 +133,22 @@ class LoginPage extends React.Component {
               onClick={() => this.setState({ count: 3 })}
               style={{ cursor: 'pointer' }}
             ></div>
+            <div
+              className={`counter counter--4 ${
+                this.state.count === 4 ? '-active' : ''
+              }`}
+              onClick={() => this.setState({ count: 4 })}
+              style={{ cursor: 'pointer' }}
+            ></div>
+            <div
+              className={`counter counter--5 ${
+                this.state.count === 5 ? '-active' : ''
+              }`}
+              onClick={() => this.setState({ count: 5 })}
+              style={{ cursor: 'pointer' }}
+            ></div>
           </div>
+          
         </div>
       </div>
     );
