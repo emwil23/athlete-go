@@ -1,4 +1,9 @@
 import React from 'react';
+import item2 from '../img/icon_item-2.png';
+import item31 from '../img/icon1_item-3.png';
+import item32 from '../img/icon2_item-3.png';
+import item33 from '../img/icon3_item-3.png';
+import item4 from '../img/icon_item-4.png';
 
 class LoginPage extends React.Component {
   state = { count: 1, current: 'login' };
@@ -20,6 +25,9 @@ class LoginPage extends React.Component {
       return (
         <div className='item-2'>
           <div className='item-2--title'>Why Us?</div>
+          <div className='item-2--icons'>
+            <img className='item-2--icons' src={item2} alt='item 2 pic' />
+          </div>
           <p className='item-2--p'>
             Our Site provides a very effective and effecient Diet plan for
             Athletes and people who have interest at staying fit.
@@ -30,6 +38,11 @@ class LoginPage extends React.Component {
       return (
         <div className='item-3'>
           <div className='item-3--title'>How We Work!</div>
+          <div className='item-3--icons'>
+            <img src={item31} alt='item 3 1' />
+            <img src={item32} alt='item 3 2' />
+            <img src={item33} alt='item 3 3' />
+          </div>
           <p className='item-3--p'>
             We Provide a diet chart to our clients which is made by our expert
             dietitians.
@@ -40,6 +53,10 @@ class LoginPage extends React.Component {
       return (
         <div className='item-4'>
           <div className='item-4--title'>Who we are?</div>
+          <div className='item-4--icons'>
+            <img src={item4} alt='item 4' className='item-4--icons' />
+          </div>
+
           <p className='item-4--p'>
             We are team of expert dietitian our ditetians has helped many
             athelets in achieivng their goals and helped them in maintaining
