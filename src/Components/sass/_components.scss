@@ -56,7 +56,11 @@
   }
 
   //Login Form design
-  &-form {
+  &-formlogin {
+    margin-top: 5rem;
+  }
+
+  &-formsignup {
     margin-top: 5rem;
   }
 }
@@ -165,11 +169,11 @@
   }
 }
 
-.item-{
+.item- {
   height: 95%;
 }
 .item-1 {
-  height: 95%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,6 +194,69 @@
   }
 }
 
+.item-2 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+
+  &--title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: auto;
+  }
+
+  &--p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 5rem;
+    width: 55rem;
+    text-align: center;
+  }
+}
+.item-3 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+  &--title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: auto;
+  }
+
+  &--p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 5rem;
+    width: 55rem;
+    text-align: center;
+  }
+}
+.item-4 {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  flex-direction: column;
+  &--title {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: auto;
+  }
+
+  &--p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    margin-bottom: 5rem;
+    width: 55rem;
+    text-align: center;
+  }
+}
+.item-5 {
+}
 
 .counter {
   height: 1rem;
