@@ -4,6 +4,8 @@ import item31 from '../img/icon1_item-3.png';
 import item32 from '../img/icon2_item-3.png';
 import item33 from '../img/icon3_item-3.png';
 import item4 from '../img/icon_item-4.png';
+import user1 from '../img/user1_item-5.jpg';
+import user2 from '../img/user2_item-5.jpg';
 
 class LoginPage extends React.Component {
   state = { count: 1, current: 'login' };
@@ -68,7 +70,38 @@ class LoginPage extends React.Component {
     else if (counter === 5)
       return (
         <div className='item-5'>
-          <b>Testimony</b>
+          <div className='item-5--title'>Our Testimonies</div>
+          <div className='item-5--user-reviews'>
+            <figure className='review'>
+              <blockquote className='review__text'>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+                doloremque architecto dicta animi, totam, itaque officia ex.
+              </blockquote>
+              <figcaption className='review__user'>
+                <img src={user1} className='review__photo' alt='User 1' />
+                <div className='review__user-box'>
+                  <p className='review__user-name'>Nick Smith</p>
+                  <p className='review__user-date'>Feb 23rd, 2021</p>
+                </div>
+                <div className='review__rating'>7.8</div>
+              </figcaption>
+            </figure>
+
+            <figure className='review'>
+              <blockquote className='review__text'>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
+                doloremque architecto dicta animi.
+              </blockquote>
+              <figcaption className='review__user'>
+                <img src={user2} className='review__photo' alt='User 2' />
+                <div className='review__user-box'>
+                  <p className='review__user-name'>Marry Thomas</p>
+                  <p className='review__user-date'>Sept 1st, 2021</p>
+                </div>
+                <div className='review__rating'>9.3</div>
+              </figcaption>
+            </figure>
+          </div>
         </div>
       );
   };
@@ -233,7 +266,7 @@ class LoginPage extends React.Component {
         <div className='container__cover'>
           <div className='container__cover__items'>
             {this.Cover(this.state.count)}
-            {/* {this.ChangeCover()} */}
+            {this.ChangeCover()}
           </div>
           <div className='container__cover-counter'>
             <div
