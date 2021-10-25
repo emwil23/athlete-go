@@ -74,8 +74,7 @@ class LoginPage extends React.Component {
           <div className='item-5--user-reviews'>
             <figure className='review'>
               <blockquote className='review__text'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                doloremque architecto dicta animi, totam, itaque officia ex.
+                I used it and it really helped me alot.
               </blockquote>
               <figcaption className='review__user'>
                 <img src={user1} className='review__photo' alt='User 1' />
@@ -89,8 +88,7 @@ class LoginPage extends React.Component {
 
             <figure className='review'>
               <blockquote className='review__text'>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga
-                doloremque architecto dicta animi.
+                This is the worst site I have ever used in my entire life. I advice everyone not to use it ever.
               </blockquote>
               <figcaption className='review__user'>
                 <img src={user2} className='review__photo' alt='User 2' />
