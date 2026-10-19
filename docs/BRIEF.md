@@ -14,7 +14,7 @@ Read `D:\Code\AIPro\AIPro\ew-apps\CLAUDE.md` first: it holds the owner's rules, 
 **AthleteGO: your AI sports-nutrition coach.** You set your goal, sport, body stats, diet, allergies, budget and cuisine. AthleteGO generates a weekly meal plan with macros, a grocery list and recipes, and adapts each week to your progress.
 
 Pages:
-- `/`: landing with a 3D hero (the owner's character as an athlete, with a plate of food assembling itself in 3D: macro rings orbiting, ingredients snapping into place), scroll storytelling of the three steps (profile → plan → progress), sports showcase, pricing teaser, footer "Made with ♥ by EWSTUDIOS".
+- `/`: landing with a 3D hero (a plate of food assembling itself in 3D: macro rings orbiting, ingredients snapping into place), scroll storytelling of the three steps (profile → plan → progress), sports showcase, pricing teaser, footer "Made with ♥ by EWSTUDIOS".
 - `/onboarding`: a 6-step profile wizard (goal, sport and training days, body stats with metric/imperial, diet type, allergies and dislikes, budget and cooking time). It shows the calculated targets live (Mifflin-St Jeor BMR × activity factor, with macros split by goal).
 - `/app/plan`: week view of breakfast, lunch, dinner and snacks, each with macros. Swap a meal, lock a meal, regenerate a day.
 - `/app/recipe/:id`: ingredients scaled to servings, steps, a cook mode (big text, screen stays awake via the Wake Lock API, step timers).
@@ -60,8 +60,8 @@ Sync across devices, unlimited saved plans and history, PDF export of the week a
 
 ## 7. Design and assets
 - Use the `awwwards` MCP for 3–5 references (food, sports, health, 3D product) and write docs/design-brief.md. Direction to explore: athletic energy (bold condensed type, motion) with fresh-food warmth. Not a gym-bro dark-neon look.
-- Google Flow (project "Revamp", master character), one session at a time in the owner's Chrome:
-  - hero clip (the character in athletic wear with the plate assembling) and still
+- Google Flow (project "Revamp"; the owner's master character only for the developer page), one session at a time in the owner's Chrome:
+  - hero clip (the plate assembling, no person) and still
   - 6 sport scenes (running, football, cricket, gym, swimming, cycling)
   - about 12 hero recipe photos, studio-lit and in a consistent style (other recipes use generated thumbnails in the same style)
   - 4 onboarding and 4 empty-state illustrations
